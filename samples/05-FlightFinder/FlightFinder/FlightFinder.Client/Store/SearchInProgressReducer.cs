@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace FlightFinder.Client.Store
 {
-	public class SearchReducer : Reducer<AppState, SearchAction>
+	public class SearchInProgressReducer : Reducer<AppState, SearchInProgressAction>
 	{
-		public override AppState Reduce(AppState state, SearchAction action)
+		public override AppState Reduce(AppState state, SearchInProgressAction action)
 		{
 			return new AppState(
 				searchInProgress: true,

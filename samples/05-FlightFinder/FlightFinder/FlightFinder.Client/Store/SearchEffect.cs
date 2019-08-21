@@ -19,6 +19,7 @@ namespace FlightFinder.Client.Store
 		{
 			try
 			{
+				dispatcher.Dispatch(new SearchInProgressAction());
 				Itinerary[] searchResults = await HttpClient.PostJsonAsync<Itinerary[]>("api/flightsearch", action.SearchCriteria);
 				dispatcher.Dispatch(new SearchCompleteAction(searchResults));
 			}
