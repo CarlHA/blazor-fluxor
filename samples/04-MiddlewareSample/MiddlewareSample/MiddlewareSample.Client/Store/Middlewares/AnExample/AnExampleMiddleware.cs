@@ -27,6 +27,7 @@ namespace MiddlewareSample.Client.Store.Middlewares.AnExample
 		public override void BeforeDispatch(object action)
 		{
 			Console.WriteLine($"Action {action.GetType().Name} is about to be dispatched to all features");
+			
 		}
 
 		public override void AfterDispatch(object action)

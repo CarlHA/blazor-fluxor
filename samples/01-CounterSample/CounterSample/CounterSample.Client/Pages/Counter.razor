@@ -11,11 +11,23 @@
 
 <p>Current count: @CounterState.Value.ClickCount</p>
 
-<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+<button class="btn btn-primary" @onclick="IncrementCount">Increment</button>
+<button class="btn btn-secondary" @onclick="DecrementCount">Decrement</button>
+<button class="btn btn-danger" @onclick="ResetCounter">Reset Counter</button>
 
 @code {
 	void IncrementCount()
 	{
-		Dispatcher.Dispatch(new IncrementCounterAction());
+		Dispatcher.Dispatch(new IncrementCountAction());
 	}
+
+        void DecrementCount()
+    {
+        Dispatcher.Dispatch(new DecrementCountAction());
+    }
+
+        void ResetCounter()
+    {
+        Dispatcher.Dispatch(new ResetCounterAction());
+    }
 }

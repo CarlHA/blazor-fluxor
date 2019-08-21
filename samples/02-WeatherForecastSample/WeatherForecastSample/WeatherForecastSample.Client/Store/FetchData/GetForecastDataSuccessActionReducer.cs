@@ -8,7 +8,7 @@ namespace WeatherForecastSample.Client.Store.FetchData
 		{
 			return new FetchDataState(
 				isLoading: false,
-				errorMessage: null,
+				errorMessage: string.Empty,
 				forecasts: action.WeatherForecasts);
 		}
 	}

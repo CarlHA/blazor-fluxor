@@ -1,4 +1,7 @@
-﻿using WeatherForecastSample.Shared;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using WeatherForecastSample.Shared;
 
 namespace WeatherForecastSample.Client.Store.FetchData
 {
@@ -12,7 +15,7 @@ namespace WeatherForecastSample.Client.Store.FetchData
 		{
 			IsLoading = isLoading;
 			ErrorMessage = errorMessage;
-			Forecasts = forecasts;
+            Forecasts = forecasts ?? Array.Empty<WeatherForecast>();
 		}
 	}
 }

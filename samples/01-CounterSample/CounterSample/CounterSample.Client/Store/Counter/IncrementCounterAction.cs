@@ -2,7 +2,15 @@
 
 namespace CounterSample.Client.Store.Counter
 {
-	public class IncrementCounterAction
+	public class IncrementCountAction
 	{
 	}
+
+    public class DecrementCountAction
+    {
+    }
+
+    public class ResetCounterAction
+    {
+    }
 }

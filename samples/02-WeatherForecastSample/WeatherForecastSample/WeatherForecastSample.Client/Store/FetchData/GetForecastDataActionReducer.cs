@@ -1,4 +1,7 @@
 ﻿using Blazor.Fluxor;
+using System;
+using System.Linq;
+using WeatherForecastSample.Shared;
 
 namespace WeatherForecastSample.Client.Store.FetchData
 {
@@ -8,8 +11,8 @@ namespace WeatherForecastSample.Client.Store.FetchData
 		{
 			return new FetchDataState(
 				isLoading: true,
-				errorMessage: null,
-				forecasts: null);
+				errorMessage: string.Empty,
+				forecasts: Array.Empty<WeatherForecast>());
 		}
 	}
 }

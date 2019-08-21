@@ -11,7 +11,6 @@ namespace MiddlewareSample.Client
 		{
 			services.AddFluxor(options => options
 				.UseDependencyInjection(typeof(Startup).Assembly)
-				.AddMiddleware<Blazor.Fluxor.Routing.RoutingMiddleware>() // So we can see route changes in the console
 				.AddMiddleware<AnExampleMiddleware>()
 			);
 		}
